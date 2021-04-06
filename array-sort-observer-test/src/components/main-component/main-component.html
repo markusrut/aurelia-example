@@ -1,0 +1,10 @@
+<h1>Main Component</h1>
+<!-- <button click.delegate="reload(1)">1 reload</button>
+<button click.delegate="reload(100)"> 100 reloads</button>
+<button click.delegate="reload(1000)">1000 reload</button> -->
+<button click.delegate="reloadAndSelect(1)">1 reload and select random item</button>
+<button click.delegate="reloadAndSelect(100)">100 reload and select random item</button>
+<div class="row">
+  <list-component item-list.bind="itemList"></list-component>
+  <selected-component if.bind="selectedItem" selected-item.bind="selectedItem"></selected-component>
+</div>

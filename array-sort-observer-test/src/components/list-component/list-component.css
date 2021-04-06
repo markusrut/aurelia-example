@@ -1,0 +1,8 @@
+list-component {
+  margin: 4px;
+  padding: 4px;
+  border: 2px solid green;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

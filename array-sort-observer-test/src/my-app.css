@@ -1,3 +1,5 @@
-.message {
-  background-color: lightblue;
+my-app {
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
