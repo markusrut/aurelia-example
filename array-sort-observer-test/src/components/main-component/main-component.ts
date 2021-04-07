@@ -21,12 +21,23 @@ export class MainComponent {
     for (let i = 0; i < numberOfReloads; i++) {
       this.itemStore.load();
     }
+
+    console.log("reload loop done")
   }
 
   reloadAndSelect(numberOfReloads: number) {
     for (let i = 0; i < numberOfReloads; i++) {
       this.itemStore.load();
 
+      const indexToSelect = Math.floor(Math.random() * this.itemList.length)
+      this.itemStore.selectItem(this.itemList[indexToSelect])
+    }
+
+    console.log("reloadAndSelect loop done")
+  }
+
+  select(numberOfSelects: number) {
+    for (let i = 0; i < numberOfSelects; i++) {
       const indexToSelect = Math.floor(Math.random() * this.itemList.length)
       this.itemStore.selectItem(this.itemList[indexToSelect])
     }

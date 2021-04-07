@@ -2,8 +2,10 @@ export class ItemStore {
   container: ContainerItem
 
   load() {
+    console.group('load')
     console.time('load')
 
+    this.container = { items: [] };
     this.container = {
       items: [
         { id: 1, title: "TestItem 1", sortOrder: 8, isSelected: false },
@@ -22,21 +24,19 @@ export class ItemStore {
 
     this.sortItemList();
 
-    console.timeEnd('load')
+    console.timeEnd('load');
+    console.count('End of load')
+    console.groupEnd()
   }
 
 
   selectItem(item: Item) {
-    // console.time('selectItem')
-
     this.container.items.forEach(i => i.isSelected = false);
     item.isSelected = true;
-
-    // console.timeEnd('selectItem')
   }
 
   private sortItemList() {
-    console.log('sortItemList started')
+    console.group('sortItemList')
     console.time('sortItemList')
 
     this.container.items.sort((a, b) => {
@@ -44,6 +44,7 @@ export class ItemStore {
     })
 
     console.timeEnd('sortItemList')
+    console.groupEnd()
   }
 }
 
