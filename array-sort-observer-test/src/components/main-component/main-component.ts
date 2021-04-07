@@ -7,6 +7,7 @@ export class MainComponent {
   get selectedItem() {
     console.time('selectedItem')
     const foundItem = this.itemList.find(i => i.isSelected);
+    console.count("selectedItem count")
     console.timeEnd('selectedItem')
     return foundItem
   }

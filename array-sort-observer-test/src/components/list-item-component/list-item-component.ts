@@ -13,6 +13,7 @@ export class ListItemComponent {
   constructor(private itemStore: ItemStore) {}
 
   selectItem() {
+    debugger;
     this.itemStore.selectItem(this.item);
   }
 }
