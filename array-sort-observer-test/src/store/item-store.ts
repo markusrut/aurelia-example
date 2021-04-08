@@ -5,7 +5,6 @@ export class ItemStore {
     console.group('load')
     console.time('load')
 
-    this.container = { items: [] };
     this.container = {
       items: [
         { id: 1, title: "TestItem 1", sortOrder: 8, isSelected: false },
