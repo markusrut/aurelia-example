@@ -1,0 +1,45 @@
+{
+  "name": "route-test",
+  "description": "An Aurelia 2 client application.",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "???"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "aurelia": "dev"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "@aurelia/testing": "dev",
+    "htmlhint": "^0.14.2",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "url-loader": "^4.1.1",
+    "file-loader": "^6.2.0",
+    "style-loader": "^2.0.0",
+    "css-loader": "^5.2.6",
+    "@aurelia/webpack-loader": "dev",
+    "ts-loader": "^9.2.2",
+    "postcss-loader": "^5.3.0",
+    "postcss": "^8.3.0",
+    "autoprefixer": "^10.2.6",
+    "@types/node": "^15.6.1",
+    "typescript": "^4.3.2",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0"
+  },
+  "scripts": {
+    "lint:js": "eslint src test --ext .js,.ts",
+    "lint:html": "htmlhint -c .htmlhintrc src",
+    "lint": "npm run lint:js && npm run lint:html",
+    "start": "webpack serve",
+    "build": "rimraf dist && webpack --env production",
+    "analyze": "rimraf dist && webpack --env production --analyze"
+  }
+}
