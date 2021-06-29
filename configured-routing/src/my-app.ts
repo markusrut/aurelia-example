@@ -19,6 +19,24 @@ import { IRouter, routes } from "aurelia-direct-router";
     ],
     title: "Batch",
   },
+  {
+    id: "test1",
+    path: "/test1",
+    instructions: [
+      { component: "page-menu", viewport: "menu" },
+      { component: "page-day", viewport: "main" },
+    ],
+    title: "Batch",
+  },
+  {
+    id: "test2",
+    path: "/test2",
+    instructions: [
+      { component: "page-menu", viewport: "menu" },
+      { component: "page-batch", viewport: "main" },
+    ],
+    title: "Batch",
+  },
 ])
 export class MyApp {
   constructor(@IRouter private readonly router: IRouter) {}
@@ -31,5 +49,9 @@ export class MyApp {
     batchId
       ? this.router.load(`p3/batch/${batchId}`)
       : this.router.load("p3/batch");
+  }
+
+  loadTest(number: number) {
+    this.router.load(`/test${number}`);
   }
 }
