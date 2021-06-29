@@ -1,7 +1,11 @@
 <div class="header">
-  <button click.delegate="loadDay()">loadDay</button>
-  <button click.delegate="loadBatch()">loadBatch</button>
-  <button click.delegate="loadBatchWithId()">loadBatchWithId</button>
+  <button click.trigger="loadDay()">loadDay</button>
+  <button click.trigger="loadDay('2021-06-28')">loadDay-2021-06-28</button>
+  <button click.trigger="loadDay('2021-06-30')">loadDay-2021-06-30</button>
+  <button click.trigger="loadBatch()">loadBatch</button>
+  <button click.trigger="loadBatch(1)">loadBatch-1</button>
+  <button click.trigger="loadBatch(2)">loadBatch-2</button>
+  <button click.trigger="loadBatch(3)">loadBatch-3</button>
 </div>
 <div class="body">
   <div class="side-panel">

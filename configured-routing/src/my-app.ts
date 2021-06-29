@@ -23,15 +23,13 @@ import { IRouter, routes } from "aurelia-direct-router";
 export class MyApp {
   constructor(@IRouter private readonly router: IRouter) {}
 
-  loadDay() {
-    this.router.load("p3-din-gata/day/2021-06-28");
+  loadDay(date?: string) {
+    date ? this.router.load(`p3/day/${date}`) : this.router.load("p3/day");
   }
 
-  loadBatch() {
-    this.router.load("p3-din-gata/batch");
-  }
-
-  loadBatchWithId() {
-    this.router.load("p3-din-gata/batch/12");
+  loadBatch(batchId?: number) {
+    batchId
+      ? this.router.load(`p3/batch/${batchId}`)
+      : this.router.load("p3/batch");
   }
 }
